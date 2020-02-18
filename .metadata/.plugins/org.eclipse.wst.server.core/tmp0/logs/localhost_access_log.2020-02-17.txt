@@ -1,0 +1,4 @@
+127.0.0.1 - - [17/Feb/2020:16:28:22 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [17/Feb/2020:16:29:04 +0530] "GET /web-customer-tracker/TestDbServlet HTTP/1.1" 500 106
+127.0.0.1 - - [17/Feb/2020:16:30:25 +0530] "GET / HTTP/1.1" 404 994
+0:0:0:0:0:0:0:1 - - [17/Feb/2020:16:30:26 +0530] "GET /web-customer-tracker/TestDbServlet HTTP/1.1" 200 118
