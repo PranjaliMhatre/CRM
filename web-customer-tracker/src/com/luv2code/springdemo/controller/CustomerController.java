@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.luv2code.springdemo.dao.CustomerDAO;
 import com.luv2code.springdemo.entity.Customer;
 import com.luv2code.springdemo.service.CustomerService;
 
@@ -49,13 +48,14 @@ public class CustomerController {
 	}
 	
 	@GetMapping("/showUpdateForm")
-	public String updateCustomer(@RequestParam("customerId")int customerId){
+	public String updateCustomer(@RequestParam("customerId")int customerId, Model theModel){
 		// get the customer from the database
+		Customer customer = customerService.getCustomer(customerId);
 		
 		//set customer as the model attribute to prepopulate the form
+		theModel.addAttribute("customer", customer);
 		
-		// send over to our form
-		
-		return null;
+		// send over to our form		
+		return "customer-form";
 	}
 }
